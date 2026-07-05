@@ -5,6 +5,20 @@ ROMAC / FastMark.  Fork de `../Prototipo_Etiquetas_Individuales`
 (2026-07-04) reducido a un solo objetivo: **detectar manchones, oclusiones
 y desvíos de color, rápido y sin GPU**.
 
+## Repositorio remoto (desde 2026-07-04)
+
+- **GitHub (privado):** https://github.com/miguelpaez2101/Calidad_Etiquetas_Fastmark-ROI
+  (rama única `main`).  El proyecto completo vive en
+  https://github.com/miguelpaez2101/Calidad_Etiquetas_Fastmark.
+- **Flujo:** editar y push desde la laptop (WSL); pull en la Jetson.
+  Tras clonar: `cp config/calibracion.ejemplo.json config/calibracion.json`.
+- **Excluido del repo:** `referencias/` (modelos/bancos regenerables),
+  `fotos_prueba/`, imágenes de calibración (el `.npz` de 1.5 KB SÍ va,
+  SHA256 `99021318f212fb45ca9321cc62e9e60d53526bd0608b2187fe946314fd1cbeb4`),
+  `logs/`, `.claude/` y `config/calibracion.json` (config por máquina —
+  usar la plantilla).
+- **Mantener privado:** contiene nombres del cliente y sus productos.
+
 ## Qué es (y qué NO es)
 
 Detecta comparando estadísticas HSV **por celda de 16 px** contra un banco
