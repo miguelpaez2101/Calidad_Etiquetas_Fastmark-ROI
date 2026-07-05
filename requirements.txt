@@ -1,0 +1,20 @@
+# Prototipo Etiquetas ROI — variante ligera SIN OCR ni PatchCore.
+# Todo corre en CPU: sin torch, sin paddlepaddle, sin GPU.
+#
+# Jetson (producción): usar el OpenCV del sistema (JetPack 4.5.4+) — NO
+# instalar opencv-python ahí (pisa el del sistema y rompe cv2.selectROI).
+# El marcador de plataforma de abajo lo excluye automáticamente en aarch64.
+
+PyQt5>=5.15
+
+# <2.0: el OpenCV del JetPack está compilado contra numpy 1.x.  En la laptop
+# de desarrollo numpy 2.x también funciona, pero mantener el pin simplifica
+# tener UN solo requirements para ambos entornos.
+numpy>=1.24,<2.0
+
+opencv-python>=4.8 ; platform_machine != "aarch64"
+
+# Solo para el k-means HSV de la calibración automática de paleta
+# (logica/calibracion_referencia.py).  El detector (detector_roi.py) es
+# numpy puro y no lo necesita.
+scikit-learn>=1.3

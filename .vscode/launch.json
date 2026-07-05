@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Main (WSL + Wayland)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "QT_QPA_PLATFORM": "wayland"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Main (debug con breakpoints en libs)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "QT_QPA_PLATFORM": "wayland"
+            },
+            "justMyCode": false
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "_NOTA": "PLANTILLA versionada (valores neutros). En cada máquina: copiar este archivo como config/calibracion.json y ajustar. La app lo reescribe en ejecución (nunca editar la copia real con la app abierta). La contraseña de mantenimiento se define desde la propia app (hash/sal vacíos = sin contraseña). El recorte en ceros significa 'sin recorte' — definirlo con 'Definir área de inspección' en Mantenimiento. referencia_activa vacía = ninguna (se elige en la app).",
+    "version": "3.0",
+    "contrasena": {
+        "hash": "",
+        "sal": ""
+    },
+    "camara": {
+        "device_id": 0,
+        "resolucion": [
+            4000,
+            3000
+        ],
+        "fps": 12
+    },
+    "referencia_activa": "",
+    "inspeccion": {
+        "umbral_manchas": 100
+    },
+    "recorte": {
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+    }
+}

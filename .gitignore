@@ -1,0 +1,43 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# ── Logs ────────────────────────────────────────────────
+logs/
+*.log
+
+# ── Datos pesados: se mantienen en disco, FUERA de Git ──
+# Decisión del proyecto: los modelos .pkl y los bancos de
+# "buenas" son regenerables (el banco se recaptura), y meter
+# ~165 MB de binarios en el historial saturaría la sync de
+# Google Drive. Estos archivos siguen existiendo en disco.
+referencias/
+fotos_prueba/
+evaluacion/
+plantillas/
+
+# calibracion_camara: versionar los scripts .py y calibracion.npz
+# (1.5 KB, difícil de regenerar: sesión de ~40 fotos con tablero;
+# SHA256 documentado en README.md).  No las imágenes de trabajo.
+calibracion_camara/*
+!calibracion_camara/*.py
+!calibracion_camara/calibracion.npz
+
+# ── Configuración local de herramientas ─────────────────
+.claude/
+.vscode/settings.json
+
+# ── Config específica de ESTA máquina ───────────────────
+# Contiene el hash de la contraseña de mantenimiento y el recorte
+# propio de la instalación; además la app la reescribe en ejecución.
+# En cada máquina se crea copiando config/calibracion.ejemplo.json
+# (ver README.md).
+config/calibracion.json
+
+# ── Sistema operativo ───────────────────────────────────
+Thumbs.db
+.DS_Store
